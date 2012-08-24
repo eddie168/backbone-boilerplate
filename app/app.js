@@ -1,11 +1,14 @@
+/*global define:true */
 define([
   // Libraries.
   "jquery",
   "lodash",
   "backbone",
+  "bootstrap",
 
   // Plugins.
-  "plugins/backbone.layoutmanager"
+  "plugins/backbone.layoutmanager",
+  "plugins/plugins"
 ],
 
 function($, _, Backbone) {
