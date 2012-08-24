@@ -4,6 +4,7 @@ define([
   "jquery",
   "lodash",
   "backbone",
+  "handlebars",
   "bootstrap",
 
   // Plugins.
@@ -11,7 +12,7 @@ define([
   "plugins/plugins"
 ],
 
-function($, _, Backbone) {
+function($, _, Backbone, Handlebars) {
 
   // Provide a global location to place configuration settings and module
   // creation.
@@ -36,16 +37,17 @@ function($, _, Backbone) {
 
       // If cached, use the compiled template.
       if (JST[path]) {
-        return JST[path];
+        return JST[path] = Handlebars.template(JST[path]);
+      } else {
+        // Put fetch into `async-mode`.
+        var done = this.async();
+
+        // Seek out the template asynchronously.
+        $.get(app.root + path, function(contents) {
+          done(JST[path] = Handlebars.compile(contents));
+        });
       }
 
-      // Put fetch into `async-mode`.
-      var done = this.async();
-
-      // Seek out the template asynchronously.
-      $.get(app.root + path, function(contents) {
-        done(JST[path] = _.template(contents));
-      });
     }
   });
 

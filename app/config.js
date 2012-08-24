@@ -14,7 +14,10 @@ require.config({
     jquery: "../assets/js/libs/jquery",
     lodash: "../assets/js/libs/lodash",
     backbone: "../assets/js/libs/backbone",
-    bootstrap: "../assets/js/libs/bootstrap"
+    bootstrap: "../assets/js/libs/bootstrap",
+    handlebars: "../assets/js/libs/handlebars-1.0.0.beta.6"
+    /* Use runtime for pre-compiled template (bbb release) */
+    //handlebars: "../assets/js/libs/handlebars.runtime-1.0.0.beta.6"
   },
 
   shim: {
@@ -24,6 +27,12 @@ require.config({
       exports: "Backbone"
     },
 
+    // Need to make handlebars globally available
+    handlebars: {
+      exports: "Handlebars"
+    },
+
+    // Twitter Bootstrap depends on jQuery.
     bootstrap: ["jquery"],
 
     // Backbone.LayoutManager depends on Backbone.

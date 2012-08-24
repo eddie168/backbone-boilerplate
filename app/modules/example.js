@@ -1,3 +1,4 @@
+/*global define:true */
 define([
   "app",
 
@@ -16,7 +17,13 @@ function(app, Backbone) {
 
   // This will fetch the tutorial template and render it.
   Example.Views.Tutorial = Backbone.View.extend({
-    template: "example"
+    template: "example",
+
+    serialize: function () {
+      return {
+        title: "Hello KYEW!"
+      };
+    }
   });
 
   // Required, return the module for AMD compliance
