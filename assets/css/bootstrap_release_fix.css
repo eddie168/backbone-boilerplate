@@ -1,0 +1,10 @@
+[class^="icon-"],
+[class*=" icon-"] {
+  background-image: url("../../assets/img/glyphicons-halflings.png");
+}
+
+.icon-white {
+  background-image: url("../../assets/img/glyphicons-halflings-white.png");
+}
+
+
