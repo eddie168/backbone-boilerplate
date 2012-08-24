@@ -1,7 +1,8 @@
 /* H5BP styles. */
+/*
 @import "../vendor/h5bp/css/normalize.css";
 @import "../vendor/h5bp/css/main.css";
-
+*/
 /* Add Stylus stylesheets here, alll files ending in .styl will be compiled!
  * For example: @import "main.styl";
  *
@@ -12,3 +13,6 @@
 
 
 /* Put development-only CSS below this line. */
+@import url("bootstrap.css");
+@import url("style.css");
+@import url("bootstrap-responsive.css");
