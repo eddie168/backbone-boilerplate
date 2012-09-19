@@ -15,6 +15,7 @@ function(app, Example) {
     },
 
     index: function() {
+      /*
       // Create a layout and associate it with the #main div.
       var layout = new Backbone.Layout({
         el: "#main"
@@ -25,6 +26,9 @@ function(app, Example) {
       
       // Render the layout into the DOM.
       layout.render();
+      */
+      app.useLayout("main").render();
+      app.layout.setView("#content", new Example.Views.Tutorial());
     }
   });
 
