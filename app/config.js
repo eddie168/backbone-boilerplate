@@ -15,7 +15,7 @@ require.config({
     lodash: "../assets/js/libs/lodash",
     backbone: "../assets/js/libs/backbone",
     bootstrap: "../assets/js/libs/bootstrap",
-    handlebars: "../assets/js/libs/handlebars-1.0.0.beta.6"
+    handlebars: "../assets/js/libs/handlebars-1.0.rc.1"
     /* Use runtime for pre-compiled template (bbb release) */
     //handlebars: "../assets/js/libs/handlebars.runtime-1.0.0.beta.6"
   },
