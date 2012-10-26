@@ -19,7 +19,8 @@ function(app, Backbone) {
   Example.Views.Tutorial = Backbone.View.extend({
     template: "example",
 
-    serialize: function () {
+    //serialize: function () {
+    data: function () {
       return {
         title: "Hello KYEW!"
       };

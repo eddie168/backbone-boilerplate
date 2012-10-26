@@ -27,7 +27,7 @@ function(app, Example) {
       // Render the layout into the DOM.
       layout.render();
       */
-      app.useLayout("main").render();
+      app.useLayout({template:"layouts/main"}).render();
       app.layout.setView("#content", new Example.Views.Tutorial());
     }
   });
