@@ -1,0 +1,10 @@
+{
+  "launch_in_dev": [
+    "phantomjs"
+  ],
+  "framework": "mocha",
+  "test_page": "test/mocha/runner.html",
+  "src_files": [
+    "test/mocha/runner.js"
+  ]
+}
