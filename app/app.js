@@ -8,8 +8,12 @@ define([
   "bootstrap",
 
   // Plugins.
-  "plugins/backbone.layoutmanager",
-  "plugins/plugins"
+  "plugins/polyfill.console.log",
+  "plugins/polyfill.json2",
+  "plugins/polyfill.date.now",
+  "plugins/polyfill.webstorage",
+  "plugins/plugins",
+  "plugins/backbone.layoutmanager"
 ],
 
 function($, _, Backbone, Handlebars) {
