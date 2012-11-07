@@ -1,3 +1,8 @@
+// The r.js optimizer (run by bbb) doesn't like this line
+// deps : window.mocha ? [ '../test/mocha/runner' ] : [ 'main' ],
+// therefore put a if block here to stop main.js to load when test
+if (!window.mocha) {
+
 require([
   // Application.
   "app",
@@ -39,3 +44,5 @@ function(app, Router) {
   });
 
 });
+
+} // if (!window.mocha) {

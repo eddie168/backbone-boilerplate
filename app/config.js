@@ -2,13 +2,16 @@
 require.config({
 
   // Initialize the application with the main application file.
-  deps: ["main"],
+  // BBB Mocha test setup based on
+  // https://github.com/rmurphey/srchr-demo/tree/master/tests/app
+  deps: [ '../test/mocha/runner', 'main' ],
 
   paths: {
     // JavaScript folders.
     libs: "../assets/js/libs",
     plugins: "../assets/js/plugins",
     vendor: "../assets/vendor",
+    test : '../test/mocha/test/',
 
     // Libraries.
     jquery: "../assets/js/libs/jquery",
