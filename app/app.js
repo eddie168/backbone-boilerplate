@@ -5,7 +5,7 @@ define([
   "lodash",
   "backbone",
   "handlebars",
-  "bootstrap",
+  //"bootstrap",
 
   // Plugins.
   "plugins/polyfill.console.log",
